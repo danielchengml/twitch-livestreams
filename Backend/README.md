@@ -1,4 +1,4 @@
-# Twitch Live Streaming App (Backend Web Server)
+# Twitch Live Streaming App (Backend API Server)
 
 This Mobile Application will allow users to view Top Live Streams that are streaming on twitch.tv. This application is build using Go and React Native.
 
