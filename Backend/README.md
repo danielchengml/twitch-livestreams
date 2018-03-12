@@ -10,92 +10,99 @@ This Mobile Application will allow users to view Top Live Streams that are strea
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the Web Server up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software and how to install them:
 
-```
-$ go build
-```
+ - [The Go Programming Language](https://golang.org/dl/)
+ - Any Web Browser (Chrome, Edge, Firefox)
+ - (optional) [Postman](https://www.getpostman.com/)
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Here are the instructions to get the program up and running on the machine. *Do ensure that prerequisites are installed on your machine*
 
-Say what the step will be
-
+1. Open the terminal and navigate to the "twitch-livestreams/Backend" Folder
 ```
-Give the example
+$ cd twitch-livestreams
+$ cd Backend
 ```
-
-And repeat
-
+2. Get and install the gorilla/mux Dependency
 ```
-until finished
+$ go get -u github.com/gorilla/mux
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
+3. Build the project:
+```
+$ go build
+```
+4. Run the project:
+```
+$ go run main.go
+```
+The project will now run on `localhost:8080`.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+Once the project is running, the connection can be tested using Postman API or a Web Browser using the following url:
 ```
-Give an example
+http://localhost:8080/livestreams/overwatch
+```
+*Note: ".../overwatch" is just a search example, you could use any other word instead*
+Here is an example of the return you would expect to get:
+```
+{  
+   "_total":1424,
+   "streams":[  
+      {  
+         "_id":27906100720,
+         "game":"Overwatch",
+         "viewers":15092,
+         "video_height":900,
+         "average_fps":60.037525,
+         "delay":0,
+         "created_at":"2018-03-12T14:04:33Z",
+         "is_playlist":false,
+         "stream_type":"live",
+         "preview":{  
+            "small":"https://static-cdn.jtvnw.net/previews-ttv/live_user_timthetatman-80x45.jpg",
+            "medium":"https://static-cdn.jtvnw.net/previews-ttv/live_user_timthetatman-320x180.jpg",
+            "large":"https://static-cdn.jtvnw.net/previews-ttv/live_user_timthetatman-640x360.jpg",
+            "template":"https://static-cdn.jtvnw.net/previews-ttv/live_user_timthetatman-{width}x{height}.jpg"
+         },
+         ...
 ```
 
-### And coding style tests
 
-Explain what these tests test and why
+## Setting up the Front End Environment
 
-```
-Give an example
-```
+Once the backend server is running and returning the a valid response, the front end development environment can now be setup. The front end application is set to connect to `localhost:8080` on the backend.
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+The instructions to deploy the front end module can be found under the folder `twitch-livestreams` > `Frontend` > `README.md`
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Visual Studio Code](https://code.visualstudio.com/) - The IDE used
+* [Go Programming Language](https://golang.org/) - The Programming Language Used
+* [gorilla/mux](https://github.com/gorilla/mux) - URL router and dispatcher for Go
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Version 1.0.0
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Daniel Cheng** -  [github.com/danielchengml](https://github.com/danielchengml)
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Tomasz Wiszkowski, Google
+* David Chang, ReactJS Developer, Airbnb
+* Anbiniyar Muniandy, Full Stack Developer, Microsoft
 
 ## Sources: Twitch API (https://dev.twitch.tv/docs/api)
 
-- API for Top-100 Games that are Streaming Live:
-https://api.twitch.tv/kraken/games/top?limit=100&client_id={API_KEY}
-- API for Top-100 Live Streams based on Viewership:
-https://api.twitch.tv/kraken/streams?limit=100&client_id={API_KEY}
-- API for Top-100 Live Streams based for Selected Game: https://api.twitch.tv/kraken/streams?game={GAME_NAME}&limit=100&client_id={API_KEY}
+- API for Top-100 Live Streams based on Search Query Viewership:
+https://api.twitch.tv/kraken/search/streams?limit=100&client_id={API_KEY}
