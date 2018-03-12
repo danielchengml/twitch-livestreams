@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 
+	"./twitch"
 	"github.com/gorilla/mux"
 )
 
