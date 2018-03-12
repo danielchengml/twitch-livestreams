@@ -42,9 +42,16 @@ Detailed setup instructions can be found in `twitch-livestreams` > `Frontend` > 
 
 ## Built With
 
-  * [Visual Studio Code](https://code.visualstudio.com/) - The IDE used
-  * [Go Programming Language](https://golang.org/) - The Programming Language Used
-  * [gorilla/mux](https://github.com/gorilla/mux) - URL router and dispatcher for Go
+[Visual Studio Code](https://code.visualstudio.com/) - The IDE used
+
+__Backend:__
+* [Go Programming Language](https://golang.org/) - The Programming Language Used
+* [gorilla/mux](https://github.com/gorilla/mux) - URL router and dispatcher for Go
+
+__Frontend:__
+* [React Native 0.54](https://facebook.github.io/react-native/docs/getting-started.html#installing-dependencies) - The Programming Language Used
+* [Node](https://expo.io/) - Package Manager
+* [Expo SDK](https://expo.io/) - For Developing and publishing the Mobile Application easily
 
 
   ## Versioning
@@ -55,13 +62,13 @@ Detailed setup instructions can be found in `twitch-livestreams` > `Frontend` > 
 
   * **Daniel Cheng** -  [github.com/danielchengml](https://github.com/danielchengml)
 
-  ## Acknowledgments
+## Acknowledgments
 
   * Tomasz Wiszkowski, Google
   * David Chang, ReactJS Developer, Airbnb
   * Anbiniyar Muniandy, Full Stack Developer, Microsoft
 
-  ## Sources: Twitch API (https://dev.twitch.tv/docs/api)
+## Sources: Twitch API (https://dev.twitch.tv/docs/api)
 
   - API for Top-100 Live Streams based on Search Query Viewership:
   https://api.twitch.tv/kraken/search/streams?limit=100&client_id={API_KEY}
