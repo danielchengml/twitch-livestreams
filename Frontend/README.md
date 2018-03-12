@@ -1,12 +1,8 @@
 # Twitch Live Streaming App (Frontend Mobile Application)
 
-This Mobile Application will allow users to view Top Live Streams that are streaming on twitch.tv. This application is build using Go and React Native.
+This Mobile Application will allow users to view Top Live Streams that are streaming on [twitch.tv](https://www.twitch.tv/). The Frontend of this application is built using React Native.
 
-## User Stories
-1. As a User, I want to see the Top 100 Games that are currently live. Upon selecting the game, I want to see the top 100 streams currently streaming for that game. Upon selecting the game, I want to watch the livestream in my browser.
-
-2. As a User, I want to see the Top 100 Streams. I can then select the stream that I want to watch.
-
+This document is a step-by-step guide to setup the Frontend Development Environment using either macOS or Windows.
 
 ## Getting Started
 
@@ -29,26 +25,32 @@ What things you need to install the software and how to install them:
 
 Here are the instructions to get the program up and running on the machine. *Do ensure that prerequisites are installed on your machine*
 
-1. Open the terminal and navigate to the "twitch-livestreams/Frontend" Folder
+1. __Open the terminal and navigate__ to the "twitch-livestreams/Frontend" Folder
 ```
 $ cd twitch-livestreams
 $ cd Frontend
 ```
-1. Get and install dependencies:
+1. Get and __install dependencies__:
 ```
 $ npm install
 ```
-1. Run Mobile Emulator:
-  - For macOS users: To setup and run Xcode, follow setup and run instructions from the React Native's documentation for [macOS/iOS](https://facebook.github.io/react-native/docs/getting-started.html#xcode)
-  - For WindowsOS users: To setup and run Android Virtual Machine (AVM)on Android Studios, follow the setup instructions from the React Native's documentation for [Windows/Android](https://facebook.github.io/react-native/docs/getting-started.html#installing-dependencies)
-1. Map the Emulator's port to the machines port to ensure that the Emulator can communicate with the machine locally.
+1. __Run Mobile Emulator__:
+
+  - For macOS users: To setup and run Xcode, follow setup and run instructions from the React Native's documentation for [macOS/iOS](https://facebook.github.io/react-native/docs/running-on-device.html)
+
+  - For WindowsOS users: To setup and run Android Virtual Machine (AVM)on Android Studios, follow the setup instructions from the React Native's documentation for [Windows/Android](https://facebook.github.io/react-native/docs/running-on-device.html)
+
+1. __Map the Emulator's port__ to the machines port to ensure that the Emulator can communicate with the machine locally.
+
   - For macPC/iOS Setup:
+
+      Generally No issue connecting to local development server. If prolems persist., do refer to documentation [here](https://facebook.github.io/react-native/docs/running-on-device.html#troubleshooting)
 
   - For Windows/Android Setup:
   ```
   $ adb reverse tcp:8080 tcp:8080
   ```
-1. Run the project (do ensure that the mobile emulator is up and running on your machine):
+1. __Run the project__ (do ensure that the mobile emulator is up and running on your machine):
 ```
 $ npm run ios (for MacOS)
 $ npm run android (for Android)

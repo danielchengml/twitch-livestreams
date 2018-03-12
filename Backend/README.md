@@ -1,16 +1,13 @@
 # Twitch Live Streaming App (Backend API Server)
 
-This Mobile Application will allow users to view Top Live Streams that are streaming on twitch.tv. This application is build using Go and React Native.
+This Mobile Application will allow users to view Top Live Streams that are streaming on [twitch.tv](https://www.twitch.tv/). The Backend of this application is built using Go.
 
-## User Stories
-1. As a User, I want to see the Top 100 Games that are currently live. Upon selecting the game, I want to see the top 100 streams currently streaming for that game. Upon selecting the game, I want to watch the livestream in my browser.
-
-2. As a User, I want to see the Top 100 Streams. I can then select the stream that I want to watch.
+This document is a step-by-step guide to setup the Backend Development Environment using either macOS or Windows.
 
 
 ## Getting Started
 
-These instructions will get you a copy of the Web Server up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the Backend API/  Server up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -24,20 +21,20 @@ What things you need to install the software and how to install them:
 
 Here are the instructions to get the program up and running on the machine. *Do ensure that prerequisites are installed on your machine*
 
-1. Open the terminal and navigate to the "twitch-livestreams/Backend" Folder
+1. __Open the terminal__ and navigate to the "twitch-livestreams/Backend" Folder
 ```
 $ cd twitch-livestreams
 $ cd Backend
 ```
-2. Get and install the gorilla/mux Dependency
+2. __Get and install__ the gorilla/mux Dependency
 ```
 $ go get -u github.com/gorilla/mux
 ```
-3. Build the project:
+3. __Build the project__:
 ```
 $ go build
 ```
-4. Run the project:
+4. __Run the project__:
 ```
 $ go run main.go
 ```
